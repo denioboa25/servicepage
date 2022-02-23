@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naive</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript">
+    
+
+        $(Document).ready(function(){
+            $('h1').hide();
+            $('h1').delay('1000');
+            $('h1').fadeIn('slow');
+            $('#btn-2').click(function(){
+                $('#btn-1').css('background','rgba(42, 43, 44, 0.993)')
+                $(this).css('background','rgba(0, 77, 243, 0.993)')
+                $('.p-price').text('$120.99')
+                $('.p-time').text('Per Yearly');
+            });
+            $('#btn-1').click(function(){
+                $(this).css('background','rgba(0, 77, 243, 0.993)')
+                $('#btn-2').css('background','rgba(42, 43, 44, 0.993)')
+                $('.p-price').text('$90.99')
+                $('.p-time').text('Per Monthly');
+            });
+            $('.software').click(function(){
+                $(this).css('color','red')
+                $(this).css('box shadow','2px 2px 2px rgba(0,0,0,0.4')
+                $(this).css('color','rgb(152, 1, 252)')
+                $(this).css('border','1px solid rgb(152, 1, 252)')
+                $('.h-info').text('Software Design');
+                        
+            });
+            $('.e-commerce').click(function(){
+                $('.software').addClass('software')
+                $(this).css('border','1px solid rgb(152, 1, 252)')
+                $(this).css('box shadow','0 0 2em rgba(0,0,0,0.2)')
+                $(this).css('color','rgb(152, 1, 252)')
+                $('.h-info').text('E-commerce Website');
+            });
+            $('.data').click(function(){
+                $(this).css('border','1px solid rgb(152, 1, 252)')
+                $(this).css()
+            })
+            /*$('.div-rolante').slick({
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 4
+            });*/
+            $('.div-rolante').slick();
+            $('.new').slick({
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 2
+            });
+        
+            /*$('.software')
+                .click(function(){
+                    $(this).css('color','red')
+                    $(this).css('box shadow','2px 2px 2px rgba(0,0,0,0.4')
+                    $(this).css('color','rgb(152, 1, 252)')
+                    $(this).css('border','1px solid rgb(152, 1, 252)')
+                    $('.h-info').text('Software Design');
+                    
+                });
+            $('.e-commerce')
+                .click(function(){
+                    $('.software').addClass('software')
+                    $(this).css('border','1px solid rgb(152, 1, 252)')
+                    $(this).css('box shadow','0 0 2em rgba(0,0,0,0.2)')
+                    $(this).css('color','rgb(152, 1, 252)')
+                    $('.h-info').text('E-commerce Website');
+                })
+            $(window).scroll(function(){
+                var topo = $(window).scrollTop();
+                if(topo>300){
+                    $('.flex-items').fadeIn('slow');
+                }else{
+                    $('.flex-items').fadeOut('slow');
+                }
+            });
+            
+            $(window).scroll(function(){
+                var top = $(window).scrollTop();
+                if(top>100){
+                    $('.nav').fadeIn('slow');
+                    $('.nav').css('position','fixed');
+                }else{
+                    $('.nav').fadeOut('slow');
+                }
+            });*/
+            $('.slide').hiSlide();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="nav navbar-expand-lg">
+            <a href="#">LogoTipo<!--<img src="https://logodownload.org/wp-content/uploads/2021/08/t-rowe-price-logo.png">--></a>
+            <ul>
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>About Us</li></a>
+                <a href="#"><li>Services</li></a>
+                <a href="#"><li>Pages</li></a>
+                <a href="#"><li>Case Studies</li></a>
+                <a href="#"><li>Blog</li></a>
+                <a href="#"><li>Contact</li></a>
+            </ul>
+            <input type="submit" class="btn-nav" value="Sing In">
+        </nav>    
+    </header>
+    <main>
+        <div class="welcome">
+            <div class="text">
+                <h3 class="txt">Digital Marketing</h3>
+                <h1>Boosts Your Website Traffic</h1>
+                <p>Lorem ipsum dolor sit amet consectetur sadipcing elitr, consetetur sadipscing elitr, consetetur<br> sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam<br> erat sed dilam voluptua.
+                </p><br><br>
+                
+                <button class="btn-w">Create Account</button>
+                <div class="circles">
+                    <div class="circle1"><i class="fab fa-instagram"></i></div>
+                    <div class="circle2"><i class="fab fa-linkedin"></i></div>
+                    <div class="circle3"><i class="fab fa-twitter"></i></div>
+                    <div class="circle4"><i class="fab fa-facebook-f"></i></div>
+                </div>
+            </div>   
+        </div>
+        <div class="business"><br><br><br>
+            <h2>Measure of Business</h2><br><br>
+            <p>Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,<br> At vero eos et accusam et justo duo dolores.</p><br><br>
+            <div class="flex-items">
+                <div class="email"><br><br><br><br>
+                    <img src="https://cdn-icons.flaticon.com/png/512/3296/premium/3296464.png?token=exp=1634128979~hmac=12807d77a837443219fcbd49063029e1"><br><br>
+                    <h3>Email Marketing</h3><br>
+                    <p>Lorem ipsum dolor sit amet,consetetur<br> sadipcing elitr, no sea takimata sanctus est<br> Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="analysis"><br><br><br><br>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2615/2615093.png"><br><br>
+                    <h3>Keyword analysis</h3><br>
+                    <p>Lorem ipsum dolor sit amet,consetetur<br> sadipcing elitr, no sea takimata sanctus est<br> Lorem ipsum dolor sit amet.</p>
+                </div>
+               
+                <div class="research"><br><br><br><br>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2472/2472063.png"><br><br>
+                    <h3>Market Research</h3><br>
+                    <p>Lorem ipsum dolor sit amet,consetetur<br> sadipcing elitr, no sea takimata sanctus est<br> Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="about"><br><br>
+            <div class="ab-info">
+                <h2>About Us</h2><br>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipcing elitr,sed dilam nonumy eirmod tempor<br> invidunt ut labore et dolore magna aliquyam erat, sed dilam voluptua. At vero eos et accusam<br> et justo duo dolores et ea rebum. Stet clita kasd gubergren no sea takimata sanctus est. Lorem<br> ipsum dolor sit amet.<br><br><br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor<br> invidunt ut labore et dolore magna aliquyam.</p><br><br>
+                <button>Read More</button>
+            </div>
+            <!--<svg class="ondas" xmlns="http://www.w3.53org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#000b76" fill-opacity="0.6" d="M0,96L40,117.3C80,139,160,181,240,165.3C320,149,400,75,480,69.3C560,64,640,128,720,160C800,192,880,192,960,176C1040,160,1120,128,1200,117.3C1280,107,1360,117,1400,122.7L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>>
+                <path fill="#5000ca" fill-opacity="0.2" d="M0,64L30,85.3C60,107,120,149,180,144C240,139,300,85,360,90.7C420,96,480,160,540,176C600,192,660,160,720,176C780,192,840,256,900,240C960,224,1020,128,1080,122.7C1140,117,1200,203,1260,224C1320,245,1380,203,1410,181.3L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
+
+            
+            </svg>-->
+            
+        </div>
+        <div class="service"><br><br>
+            <h2>Services we're provided</h2><br>
+            <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr, Lorem ipsum dolor sit amet, At vero eos et accusam et<br> justo duo dolores et ea rebum. Stet clita kasd gubergren sed diam voluptua.</p><br><br>
+            <div class="items1"><br>
+                <div class="software"><br><br>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2301/2301736.png">
+                    <h3>Software Design</h3>
+                </div>
+                <div class="e-commerce"><br><br>
+                    <img src="https://cdn-icons.flaticon.com/png/512/3045/premium/3045710.png?token=exp=1634150718~hmac=902ed13b37a5ccf73869c66ebc1177e1"><br>
+                    <h3>E-commerce Website</h3>
+                </div>
+                <div class="data"><br><br>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5767/5767926.png"><br>
+                    <h3>Real Data Analytics</h3>
+                </div>
+                <div class="web"><br><br>
+                    <img src="https://cdn-icons-png.flaticon.com/512/1336/1336989.png"><br>
+                    <h3>Web Development</h3>
+                </div>
+            </div><br><br>
+            <div class="info"><br>
+                <h3 class="h-info">Software Design</h3><br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incidunt<br> labore et dolore magna aliqua.<br>Quis ipsum suspendisse ultrices gravida.Risus commodo<br> viverra maecenas accumsan.<br><br>
+
+                Lorem ipsum dolor sit amet, Stet clita kasd gubergren, stet clita kasd gubergren Lorem ipsum<br> dolor sit amet.</p>
+            </div>
+        </div>
+        <div class="team_mate"><br><br>
+            <h2>Meet Our Team</h2><br><br>
+            <div class="flex-team1">
+                
+                <div class="mate1">
+                    <img src="img/person2.png"><legend>John Lenon<br><p class="p-legend">Senior Developer</p></legend>
+                </div>
+                <div class="mate2">
+                    <img src="img/person3.png">
+                    <legend>Mathew Smith<br><p class="p-legend">Front-end Programmer</p></legend>
+                </div>
+                <div class="mate3">
+                    <img src="img/person4.png">
+                    <legend>Casper Meadows<br><p class="p-legend">Back-end Programmer</p></legend>
+                </div>
+                <div class="mate4">
+                    <img src="img/person5.png">
+                    <legend>Leonardo<br><p class="p-legend">Chef of T.I. Department</p></legend>
+                </div>
+                <br><br>
+            </div>
+            <div class="flex-team2">
+                <div class="mate5">
+                    <img src="img/person8.jpg">
+                    <legend>Shelsia Pedro<br><p class="p-legend">CEO</p></legend>
+                </div>
+                <div class="mate6">
+                    <img src="img/person9.jpg">
+                    <legend>Pedro<br><p class="p-legend">Web Designer</p></legend>
+                </div>
+                <div class="mate7">
+                    <img src="img/person7.jpg">
+                    <legend>David Clarson<br><p class="p-legend">Executive Producer</p></legend>
+                </div>
+            </div>
+        </div>
+        <div class="case_studies"><br><br><br>
+            <h2>Our Case Studies</h2><br><br>
+            <p>Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, At vero eos et accusam et justo duo dolores.</p><br><br>
+            <div class="flex-items1">
+                <div class="s-items" id="shop">
+                    <img src="img/pic6.png">
+                </div><br>
+                <div class="s-items" ><br><br><br>
+                    <img src="img/pic3.png">
+                </div><br>
+                <div class="s-items" id="office"><br><br>
+                    <img src="img/pic4.png">
+                </div><br>
+            </div>
+            <div class="flex-text">
+                <div class="s-cap" id="p-twice">
+                    <a href="#"><h3>Twice profit than before</h3></a><br>
+                    <p>Sales,SEO,Visitor</p>
+                </div>
+                <div class="s-cap" id="p-built">
+                    <a href="#"><h3>Built web faster & better</h3></a><br>
+                    <p>Sales,SEO,Visitor</p>
+                </div>
+                <div class="s-cap" id="p-office">
+                    <a href="#"><h3>Office Vector Stationary</h3></a><br>
+                    <p>Sales,SEO,Visitor</p>
+                </div>
+            </div>
+            <div class="price"><br><br>
+                <div class="flex-elements">
+                    <div class="elements">
+                        <p id="pricing">Pricing</p>
+                        <h2>Not any hidden charge, Choose Your pricing plan</h2>
+                        <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr,<br> Lorem ipsum dolor sit amet, At vero eos et accusam et<br> justo duo dolores et ea rebum. Stet clita kasd gubergren.</p><br><br>
+                        <div class="flex-button">
+                            <button class="btn btn-primary" id="btn-1">Monthly</button>
+                            <button class="btn btn-primary" id="btn-2">Yearly</button>
+                        </div>
+                        
+                    </div>
+                    <div class="carousel">
+                        <div class="slide hi-slide">
+                            <div class="hi-prev"></div>
+                            <div class="hi-next"></div>
+                            <ul>
+                                <li>
+                                    <p>Pacote Basico</p>
+                                    <p class="p-price">$90.99</p>
+                                    <p class="p-time">Per Monthly</p>
+                                    <p>50GB Bandwidth</p>
+                                    <p>Business & Finance Analysing</p>
+                                    <p>24 hour support</p>
+                                    <button class="btn-buy">Purchase</button>
+
+                                </li>
+                                <li>
+                                    <p>Pacote Mini</p>
+                                    <p class="p-price">$90.99</p>
+                                    <p class="p-time">Per Monthly</p>
+                                    <p>50GB Bandwidth</p>
+                                    <p>Business & Finance Analysing</p>
+                                    <p>24 hour support</p>
+                                    <button class="btn-buy">Purchase</button>
+                                </li>
+                                <li>
+                                    <p>Pacote Infinite</p>
+                                    <p class="p-price">$90.99</p>
+                                    <p class="p-time">Per Monthly</p>
+                                    <p>50GB Bandwidth</p>
+                                    <p>Business & Finance Analysing</p>
+                                    <p>24 hour support</p>
+                                    <button class="btn-buy">Purchase</button>
+                                </li>
+                                <li>
+                                    <p>Pacote Plus</p>
+                                    <p class="p-price">$90.99</p>
+                                    <p class="p-time">Per Monthly</p>
+                                    <p>50GB Bandwidth</p>
+                                    <p>Business & Finance Analysing</p>
+                                    <p>24 hour support</p>
+                                    <button class="btn-buy">Purchase</button>
+                                </li>
+                                <li>
+                                    <p>Pacote Max</p>
+                                    <p class="p-price">$90.99</p>
+                                    <p class="p-time">Per Monthly</p>
+                                    <p>50GB Bandwidth</p>
+                                    <p>Business & Finance Analysing</p>
+                                    <p>24 hour support</p>
+                                    <button class="btn-buy">Purchase</button>
+                                </li>
+                                <li>
+                                    <p>Pacote Grande</p>
+                                    <p class="p-price">$90.99</p>
+                                    <p class="p-time">Per Monthly</p>
+                                    <p>50GB Bandwidth</p>
+                                    <p>Business & Finance Analysing</p>
+                                    <p>24 hour support</p>
+                                    <button class="btn-buy">Purchase</button>
+                                </li>
+                                <li>
+                                    <p>Pacote BigNet</p>
+                                    <p class="p-price">$90.99</p>
+                                    <p class="p-time">Per Monthly</p>
+                                    <p>50GB Bandwidth</p>
+                                    <p>Business & Finance Analysing</p>
+                                    <p>24 hour support</p>
+                                    <button class="btn-buy">Purchase</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="testimonial"><br><br>
+                <h2 style="font-weight: bold;">Testimonial</h2><br>
+                <p>Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et<br> dolore magna aliquyam erat, At vero eos et accusam et justo duo dolores.</p><br><br>
+                <div class="div-rolante">
+                    <div class="rol1">
+                        <fieldset><br>
+                            <legend class="lg-rol"><img id="img-legend" src="img/person8.jpg"></legend>
+                            <h3>Shelsia Pedro</h3>
+                            <p id="role">CEO at PlusAcademy</p><br>
+                            <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr, Lorem ipsum dolor sit amet, At vero eos et accusam et justo duo dolores et ea rebum.<br><br> Stet clita kasd gubergren.
+                            Lorem ipsum dolor sit amet,consetetur sadipscing elitr, Lorem ipsum dolor sit amet, At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.<br><br>
+                            Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et
+                            dolore magna aliquyam erat, At vero eos et accusam et justo duo dolores.
+                            
+                            </p>
+                        </fieldset>
+                    </div>
+                    <div class="rol2">
+                        <fieldset>
+                            <legend class="lg-rol"><img id="img-legend" src="img/person8.jpg"></legend>
+                            <h3>Shelsia Pedro</h3>
+                            <p id="role">CEO at PlusAcademy</p><br>
+                            <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr, Lorem ipsum dolor sit amet, At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.<br>
+                            Lorem ipsum dolor sit amet,consetetur sadipscing elitr, Lorem ipsum dolor sit amet, At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.<br><br>
+                            Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et
+                            dolore magna aliquyam erat, At vero eos et accusam et justo duo dolores.</p>
+                        </fieldset>
+                    </div>
+                    <div class="rol3">
+                        <fieldset>
+                            <legend class="lg-rol"><img id="img-legend" src="img/person8.jpg"></legend>
+                            <h3>Shelsia Pedro</h3>
+                            <p id="role">CEO at PlusAcademy</p><br>
+                            <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr, Lorem ipsum dolor sit amet, At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.<br>
+                            Lorem ipsum dolor sit amet,consetetur sadipscing elitr, Lorem ipsum dolor sit amet, At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.<br><br>
+                            Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et
+                            dolore magna aliquyam erat, At vero eos et accusam et justo duo dolores.</p>
+                        </fieldset>
+                    </div>
+                    <div class="rol4">
+                        <fieldset>
+                            <legend class="lg-rol"><img id="img-legend" src="img/person8.jpg"></legend>
+                            <h3>Shelsia Pedro</h3>
+                            <p id="role">CEO at PlusAcademy</p><br>
+                            <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr, Lorem ipsum dolor sit amet, At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.<br>
+                            Lorem ipsum dolor sit amet,consetetur sadipscing elitr, Lorem ipsum dolor sit amet, At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.<br><br>
+                            Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et
+                            dolore magna aliquyam erat, At vero eos et accusam et justo duo dolores.</p>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <div class="get_start"><br><br>
+                <h2>Interested? Have any project?</h2>
+                <br><br>
+                <p>Lorem ipsum dolor sit amet,At vero eos et accusam et justo duo dolores et ea rebum, no sea takimata sanctus<br> est Lorem ipsum dolor sit amet. At vero eos et accusam.</p><br><br><br><br>
+                <button class="start-btn">Get Started</button>
+            </div>
+            <div class="news"><br><br>
+                <h2>Our Latest News</h2><br><br>
+                <!--<div class="flex-sec">-->
+                    <div class="flex-news">
+                        <div class="new">
+                            <div class="n-rol">
+                                <img src="img/news1.jpg">
+                            </div>
+                            <div class="n-rol2">
+                                <img src="img/news2.jpg">
+                            </div>
+                            <div class="n-rol3">
+                                hAKKDJSIW
+                            </div>
+                            <div class="n-rol4">
+                                
+                            </div>
+                        </div>
+                        <div class="submit-news">
+
+                        </div>
+                    </div>
+                <!--</div>-->
+                
+            </div>
+        
+        </div>
+    </main>
+    <footer>
+        <!--<p>2021 &copy;Mid Edge Theme, All Rights Reserved</p>
+        <div class="social">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-wifi"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-instagram"></i>
+        </div>-->
+    </footer>
+    
+</body>
+</html>
